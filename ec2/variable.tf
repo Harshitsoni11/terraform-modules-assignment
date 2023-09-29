@@ -7,16 +7,6 @@ variable "amis" {
     type = string
     description = "ami id"
 }
-variable "Name" {
-    type = string
-    description = "Name"
-   
-}
-variable "owner" {
-    type = string
-    description = "Owner"
-    default = "harshit@cloudeq.com"
-}
 variable "assignment" {
     type = string
     description = "Assignment"
@@ -27,14 +17,13 @@ variable "sub" {
     description = "subnet ids"
     
 }
-variable "purpose" {
-    type = string
-    description = "purpose id"
-    
-}
 variable "iamprofile" {
     type = string
     description = "iam profile name"
+}
+
+variable "tags" {
+    type=map(any)
 }
 
 # variable "Namebuck" {

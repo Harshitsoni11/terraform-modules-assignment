@@ -5,9 +5,7 @@ module "ec2" {
     amis = each.key
     sub=each.value.sub
     iamprofile = module.policyattach.profile_name
-    Name = each.value.name
-    owner = each.value.owner
-    purpose = each.value.purpose
+    tags = var.tags
 }
 
 module "policyattach" {
